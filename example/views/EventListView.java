@@ -14,7 +14,6 @@ import core.View;
 /**
  * View responsible for the list of events.
  */
-@SuppressWarnings("serial")
 public class EventListView extends JPanel implements View
 {
 	//-----------------------------------------------------------------------
@@ -60,7 +59,32 @@ public class EventListView extends JPanel implements View
 	 */
 	private void make_frame()
 	{
+		setLayout(new BorderLayout());
+
 		JScrollPane scrollPane = new JScrollPane(table);
 		add(scrollPane, BorderLayout.CENTER);
+
+		JPanel panelBotones = new JPanel();
+
+		javax.swing.JButton btnEliminar = new javax.swing.JButton("Eliminar");
+		panelBotones.add(btnEliminar);
+
+		add(panelBotones, BorderLayout.SOUTH);
+
+		// Acción eliminar
+		btnEliminar.addActionListener(e -> {
+			int fila = table.getSelectedRow();
+			if (fila != -1) {
+				eventListController.eliminarEvento(fila);
+			} else {
+				JOptionPane.showMessageDialog(this, "Selecciona un evento");
+			}
+		});
 	}
+
+	public void eliminarEvento(int fila) {
+		DefaultTableModel model = (DefaultTableModel) table.getModel();
+		model.removeRow(fila);
+	}
+
 }
