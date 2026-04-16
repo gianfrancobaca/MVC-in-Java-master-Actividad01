@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e9605cd-6e79-42aa-8d8f-75864b1ed7c5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/views/EventListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/views/EventListView.java" afterDir="false" />
-    </list>
+    <list default="true" id="0e9605cd-6e79-42aa-8d8f-75864b1ed7c5" name="Changes" comment="Agregué funcionalidad para eliminar eventos" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,11 +94,24 @@
       <workItem from="1775853239837" duration="2081000" />
       <workItem from="1776370687834" duration="1438000" />
       <workItem from="1776373947177" duration="34000" />
-      <workItem from="1776373988770" duration="2554000" />
+      <workItem from="1776373988770" duration="2908000" />
     </task>
+    <task id="LOCAL-00001" summary="Agregué funcionalidad para eliminar eventos">
+      <option name="closed" value="true" />
+      <created>1776377846172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776377846172</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Agregué funcionalidad para eliminar eventos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregué funcionalidad para eliminar eventos" />
   </component>
 </project>
