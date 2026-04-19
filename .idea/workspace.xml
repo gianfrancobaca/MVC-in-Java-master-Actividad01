@@ -4,20 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e9605cd-6e79-42aa-8d8f-75864b1ed7c5" name="Changes" comment="Modelo invitado creado">
-      <change afterPath="$PROJECT_DIR$/example/views/RegisterGuestView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/views/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/views/HomeView.java" afterDir="false" />
+    <list default="true" id="0e9605cd-6e79-42aa-8d8f-75864b1ed7c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/BuscarEventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/DeleteEventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/InvitadoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/BuscarEventView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/DeleteEventView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/controllers/EventListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/EventListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/controllers/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/controllers/NewEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/NewEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/core/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/core/Model.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/core/View.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/models/Frequency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Frequency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/models/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Invitado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/models/SchedulerEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/SchedulerEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/models/SchedulerIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/SchedulerIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/models/SchedulerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/SchedulerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/views/EventListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/EventListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/views/HomeView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/views/NewEventView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewEventView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/views/RegisterGuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/InvitadoView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Model1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../añaseo" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,7 +63,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/gianfrancobaca/MVC-in-Java-master-Actividad01.git&quot;,
-    &quot;accountId&quot;: &quot;67046236-0311-40cf-bca0-8055d49f1231&quot;
+    &quot;accountId&quot;: &quot;2d341bbe-07bd-4401-a2cf-f8b8d7eba892&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -48,25 +78,26 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/Desktop/MVC-in-Java-master/example/views&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/Desktop/MVC-in-Java-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -77,16 +108,24 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <setting name="addClasspath" value="true" />
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-26" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MVC-in-Java-master" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="TaskManager">
@@ -99,7 +138,21 @@
       <workItem from="1775853239837" duration="2081000" />
       <workItem from="1776370687834" duration="1438000" />
       <workItem from="1776373947177" duration="34000" />
-      <workItem from="1776373988770" duration="5614000" />
+      <workItem from="1776373988770" duration="6705000" />
+      <workItem from="1776388343160" duration="173000" />
+      <workItem from="1776388539006" duration="254000" />
+      <workItem from="1776388845187" duration="66000" />
+      <workItem from="1776389039824" duration="249000" />
+      <workItem from="1776389457927" duration="73000" />
+      <workItem from="1776389570142" duration="176000" />
+      <workItem from="1776389775746" duration="1260000" />
+      <workItem from="1776391362453" duration="25000" />
+      <workItem from="1776391694293" duration="312000" />
+      <workItem from="1776392028359" duration="207000" />
+      <workItem from="1776392254122" duration="543000" />
+      <workItem from="1776550866139" duration="1001000" />
+      <workItem from="1776552192764" duration="10943000" />
+      <workItem from="1776563187455" duration="5102000" />
     </task>
     <task id="LOCAL-00001" summary="Agregué funcionalidad para eliminar eventos">
       <option name="closed" value="true" />
@@ -117,7 +170,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776378219029</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Registrar invitado">
+      <option name="closed" value="true" />
+      <created>1776381718856</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776381718856</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Sección para ver invitados">
+      <option name="closed" value="true" />
+      <created>1776381765120</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776381765120</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +195,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Agregué funcionalidad para eliminar eventos" />
     <MESSAGE value="Modelo invitado creado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modelo invitado creado" />
+    <MESSAGE value="Registrar invitado" />
+    <MESSAGE value="Sección para ver invitados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sección para ver invitados" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

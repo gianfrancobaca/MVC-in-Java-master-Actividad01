@@ -10,4 +10,10 @@ public class Invitado {
 		this.celular = celular;
 		this.genero = genero;
 	}
+
+	public String getNombre() { return nombre; }
+	public String getCelular() { return celular; }
+	public String getGenero() { return genero; }
+
+
 }

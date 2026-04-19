@@ -7,7 +7,7 @@ import models.SchedulerEvent;
 import models.SchedulerIO;
 import views.EventListView;
 import views.NewEventView;
-
+import java.text.SimpleDateFormat;
 
 /**
  * Responsible for {@link NewEventView} behavior.
@@ -54,7 +54,8 @@ public class NewEventController extends Controller
 	public void addEvent(SchedulerEvent event)
 	{
 		Object[] metadata = new Object[5];
-		metadata[0] = event.getDate();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		metadata[0] = sdf.format(event.getDate());
 		metadata[1] = event.getEventDesc();
 		metadata[2] = event.getFrequency();
 		metadata[3] = event.getFwdEmail();

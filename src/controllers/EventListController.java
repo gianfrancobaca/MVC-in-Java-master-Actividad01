@@ -3,10 +3,10 @@ package controllers;
 import java.util.Vector;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-
 import core.Controller;
 import models.SchedulerIO;
 import views.EventListView;
+import javax.swing.JTable;
 
 
 /**
@@ -18,17 +18,42 @@ public class EventListController extends Controller
 	//		Attributes
 	//-----------------------------------------------------------------------
 	private EventListView eventListView;
-	private JTable table;
+	private DefaultTableModel model;
 	
 	
 	//-----------------------------------------------------------------------
 	//		Methods
 	//-----------------------------------------------------------------------
 	@Override
-	public void run() 
-	{
-		table = new JTable(getDataColumns(), getNameColumns());
-		eventListView = new EventListView(this, table);
+	public void run() {
+
+		model = new DefaultTableModel(getNameColumns(), 0);
+		eventListView = new EventListView(this);
+		eventListView.setModel(model);
+
+		// 🔥 AQUÍ VA LO QUE TE DIJE
+		addView("EventListView", eventListView);
+
+		// 4. Cargar datos
+		loadEvents();
+	}
+
+	public void loadEvents() {
+		try {
+			SchedulerIO schedulerIO = new SchedulerIO();
+			Vector<Vector<Object>> data = schedulerIO.getEvents();
+
+			for (Vector<Object> row : data) {
+				model.addRow(row);
+			}
+
+			model.fireTableDataChanged(); // 🔥 CLAVE
+			System.out.println("Filas cargadas desde archivo: " + data.size()); // ✅ aquí
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 	
 	/**
@@ -38,7 +63,7 @@ public class EventListController extends Controller
 	 */
 	public void addNewRow(Object[] values) 
 	{
-		((DefaultTableModel) table.getModel()).addRow(values);
+		model.addRow(values);
 	}
 	
 	
@@ -72,7 +97,7 @@ public class EventListController extends Controller
 		
 		return nameColumns;
 	}
-	
+
 	/**
 	 * Returns events list data.
 	 * 
@@ -90,4 +115,13 @@ public class EventListController extends Controller
 
 		return dataColumns;
 	}
+
+	public void eliminarEvento(int fila) {
+		model.removeRow(fila);
+	}
+
+	public DefaultTableModel getTableModel() {
+		return model;
+	}
+
 }

@@ -9,6 +9,11 @@ import javax.swing.JTable;
 import controllers.EventListController;
 import core.Model;
 import core.View;
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList;
+import models.Invitado;
 
 
 /**
@@ -22,38 +27,42 @@ public class EventListView extends JPanel implements View
 	@SuppressWarnings("unused")
 	private EventListController eventListController;
 	private JTable table;
-	
-	
+
+
 	//-----------------------------------------------------------------------
 	//		Constructor
 	//-----------------------------------------------------------------------
 	/**
 	 * It will show the list of saved events.
-	 * 
+	 *
 	 * @param eventListController Controller responsible for this view
 	 * @param table Table with saved events
 	 */
-	public EventListView(EventListController eventListController, JTable table)
-	{
+
+
+	public EventListView(EventListController eventListController) {
 		this.eventListController = eventListController;
-		this.table = table;
-		
+		this.table = new JTable(); // 🔥 FALTABA ESTO
 		make_frame();
 	}
-	
-	
+
+
 	//-----------------------------------------------------------------------
 	//		Methods
 	//-----------------------------------------------------------------------
 	@Override
-	public void update(Model model, Object data) 
+	public void update(Model model, Object data)
 	{
 		if (data != null) {
 			String notice = (String) data;
 			JOptionPane.showMessageDialog(this, notice);
 		}
 	}
-	
+
+	public void setModel(DefaultTableModel model) {
+		table.setModel(model);
+	}
+
 	/**
 	 * Creates view's frame.
 	 */
@@ -63,23 +72,6 @@ public class EventListView extends JPanel implements View
 
 		JScrollPane scrollPane = new JScrollPane(table);
 		add(scrollPane, BorderLayout.CENTER);
-
-		JPanel panelBotones = new JPanel();
-
-		javax.swing.JButton btnEliminar = new javax.swing.JButton("Eliminar");
-		panelBotones.add(btnEliminar);
-
-		add(panelBotones, BorderLayout.SOUTH);
-
-		// Acción eliminar
-		btnEliminar.addActionListener(e -> {
-			int fila = table.getSelectedRow();
-			if (fila != -1) {
-				eventListController.eliminarEvento(fila);
-			} else {
-				JOptionPane.showMessageDialog(this, "Selecciona un evento");
-			}
-		});
 	}
 
 	public void eliminarEvento(int fila) {

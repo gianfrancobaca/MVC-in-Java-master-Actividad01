@@ -1,8 +1,12 @@
 package views;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.border.EmptyBorder;
+
 import controllers.HomeController;
 import core.Model;
 import core.View;
@@ -21,8 +25,8 @@ public class HomeView extends JPanel implements View
 	@SuppressWarnings("unused")
 	private HomeController homeController;
 	private JFrame mainFrame;
-	private final static int MAIN_FRAME_WIDTH = 800;
-	private final static int MAIN_FRAME_HEIGHT = 500;
+	private final static int MAIN_FRAME_WIDTH = 500;
+	private final static int MAIN_FRAME_HEIGHT = 350;
 	private final static int MAIN_FRAME_X = 100;
 	private final static int MAIN_FRAME_Y = 100;
 	
@@ -42,6 +46,7 @@ public class HomeView extends JPanel implements View
 		this.mainFrame = mainFrame;
 		
 		make_mainFrame();
+		make_tabs();
 	}
 	
 	
@@ -61,6 +66,25 @@ public class HomeView extends JPanel implements View
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.setBounds(MAIN_FRAME_X, MAIN_FRAME_Y, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		mainFrame.setMinimumSize(new Dimension(MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT));
-		mainFrame.setTitle("MVC-in-Java");
+		
+		
+		setBorder(new EmptyBorder(5, 5, 5, 5));
+		setLayout(new BorderLayout(0, 0));
+	}
+	
+	/**
+	 * Creates tab navigation.
+	 */
+	private void make_tabs()
+	{
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+
+		tabbedPane.addTab("New event", homeController.getNewEventView());
+		tabbedPane.addTab("Events", homeController.getEventListView());
+		tabbedPane.addTab("Registrar invitado", homeController.getInvitadoView());
+		tabbedPane.addTab("Remove Event", homeController.getDeleteEventView());
+		tabbedPane.addTab("Buscar evento", homeController.getBuscarEventView());
+
+		add(tabbedPane, BorderLayout.CENTER);
 	}
 }
